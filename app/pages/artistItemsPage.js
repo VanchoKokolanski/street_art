@@ -6,9 +6,9 @@ const LS_FILTERITEM_KEY = "filterCardArtist";
 const artistItemPage = document.querySelector("#artistItems");
 const toAddNewItem = document.getElementById("toAddNewItem");
 
-let filterCardArtist;
+let filterCardArtist = [];
 let cardFooterButton4;
-
+console.log(filterCardArtist)
 function initArtistItemsPage() {
   if (localStorage.getItem(LS_ARTISTITEM_KEY) && localStorage.getItem(LS_CURENTARTIST_KEY)) {
     items = JSON.parse(localStorage.getItem(LS_ARTISTITEM_KEY));
