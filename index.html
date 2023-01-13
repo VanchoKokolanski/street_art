@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap/css/style.css"> 
+    <script src="https://kit.fontawesome.com/cd1f1800d1.js" crossorigin="anonymous"></script>
+    <!--chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- font Family -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<!-- navbar-expand-lg -->
+<body>
+    <!-- header -->    
+    <div class="container-fluid p-0">
+        <nav class="navbar backgroundHeader px-0 py-0">
+            <!-- Button trigger modal -->
+            <div class="d-flex align-items-center">
+                <a href="#" data-toggle="modal" data-target="#modalAuction" id="logoButton">
+                    <img src="./app/img/logo.png" alt="logo" class="logo">
+                </a>
+        
+                <!-- Modal -->
+                <div class="modal fade" id="modalAuction" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to leave this auction</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary text-left modalBtn" id="addAuction"  data-dismiss="modal">Add</button>
+                            <button type="button" class="btn btn-secondary modalBtn" data-dismiss="modal" id="continueButton">continue</button>
+                            <button type="button" class="btn btn-primary modalBtn" id="leaveAuction" data-dismiss="modal" >Leave Auction</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="m-0 nameOfArtist"></p>
+            </div>
+
+            <button class="navbar-toggler menu ml-auto mr-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="./app/img/menu.png" class="navbar-toggler-icon" alt="menu">
+            </button>
+        
+            <a href="#"  id="vectorAuction"><img src="./app/img/Vector.png" alt="vector" class="vector mr-2"></a>
+            
+            <div class="collapse navbar-collapse backgroundVisitor" id="navbarSupportedContent">
+                <ul class="navbar-nav text-center">
+                  <li class="nav-item"><a class="nav-link" href="#artistHomePage">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#artistItemsPage">Items</a></li>
+                  <li class="nav-item "><a class="nav-link" id="toAuctionPage">Auction</a></li>
+                </ul>
+            </div>
+        </nav> 
+    </div>
+   
+   <!-- Landing Page -->
+    <section class="page" id="landingPage">
+        <div class="d-flex justify-content-center align-items-center py-3 backgroundLandingPageAndChart">
+            <img src="./app/img/logo.png" alt="logo">
+        </div>
+        <div class="container-fluid d-flex justify-content-center align-items-center backgroundLandingPageAndChart vh-100">
+            <div class="row pt-3 paddingBottom">
+                <div class="col-6 offset-3 backgroundArtistAndSlider d-flex justify-content-center align-items-center flex-column py-3">
+                    <div class="pb-2">
+                        <button  disabled  id="asArtist" class="border-0 colorTextButton">Join as artist</button>
+                    </div>
+                    <select id="chooseArtist" class="colorTextButton"></select>
+                </div>
+                <div class="col-6 offset-3 backgroundVisitor d-flex justify-content-center align-items-center py-5">
+                    <div>
+                        <button id="asVisitor" class="border-0 ">Join as Visitor</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Home Page -->
+    <section class="page" id="visitorHomePage">
+        <!-- banner section -->
+        <div class="row backgroungWall ">
+            <div class="col-6 py-5">
+                <p class="visitorText p-3"> Looking for masterpiece?</p>
+            </div>
+            <div class="col-6 py-5 d-flex justify-content-center align-items-center">
+                <button class="visitorButton border-0 p-1">Find one more!</button>
+            </div>
+        </div>
+        <!-- sliders -->
+        <div class="container backgroundArtistAndSlider sliders">
+            <div class="row" id="imgFirstParent" >
+                <div class="col-12  ml-2 my-3 d-flex">
+                    <div class="imgSlider"><img src="./app/img/img1.jfif" class="img" alt="img1"></div>
+                    <div class="imgSlider"><img src="./app/img/img2.jfif" class="img" alt="img2"></div>
+                    <div class="imgSlider"><img src="./app/img/img3.jfif"  class="img" alt="img3"></div>
+                    <div class="imgSlider"><img src="./app/img/img4.jfif"  class="img" alt="img4"></div>
+                    <div class="imgSlider"><img src="./app/img/img5.jfif"  class="img" alt="img5"></div>
+                    <div class="imgSlider"><img src="./app/img/img6.jfif"  class="img" alt="img6"></div>
+                    <div class="imgSlider"><img src="./app/img/img7.jfif" class="img" alt="img7"></div>
+                    <div class="imgSlider"> <img src="./app/img/img8.jfif" class="img" alt="img8"></div>
+                    <div class="imgSlider"><img src="./app/img/img9.jfif"  class="img" alt="img9"></div>
+                    <div class="imgSlider"><img src="./app/img/img10.jpg"  class="img" alt="img10"></div>
+                    <div class="imgSlider"><img src="./app/img/img11.jfif"  class="img" alt="img11"></div>
+                    <div class="imgSlider"><img src="./app/img/img12.jfif"  class="img" alt="img12"></div>
+                    <div class="imgSlider"><img src="./app/img/img13.jpg" class="img" alt="img13"></div>
+                    <div class="imgSlider"><img src="./app/img/img14.jfif" class="img" alt="img14"></div>
+                    <div class="imgSlider"><img src="./app/img/img15.jfif"  class="img" alt="img15"></div>
+                    <div class="imgSlider"><img src="./app/img/img16.jfif"  class="img" alt="img16"></div>
+                    <div class="imgSlider"><img src="./app/img/img17.jpg"  class="img" alt="img17"></div>
+                    <div class="imgSlider"><img src="./app/img/img18.jfif"  class="img" alt="img18"></div>
+                </div>
+            </div>
+            <div class="row"  id="imgSecondParent">
+                <div class="col-12  ml-2 mb-3 d-flex">
+                    <div class="imgSlider"><img src="./app/img/img1.jfif" class="img" alt="img19"></div>
+                    <div class="imgSlider"><img src="./app/img/img2.jfif" class="img" alt="img20"></div>
+                    <div class="imgSlider"><img src="./app/img/img3.jfif"  class="img" alt="img21"></div>
+                    <div class="imgSlider"><img src="./app/img/img4.jfif"  class="img" alt="img22"></div>
+                    <div class="imgSlider"><img src="./app/img/img5.jfif"  class="img" alt="img23"></div>
+                    <div class="imgSlider"><img src="./app/img/img6.jfif"  class="img" alt="img24"></div>
+                    <div class="imgSlider"><img src="./app/img/img7.jfif" class="img" alt="img25"></div>
+                    <div class="imgSlider"> <img src="./app/img/img8.jfif" class="img" alt="img26"></div>
+                    <div class="imgSlider"><img src="./app/img/img9.jfif"  class="img" alt="img27"></div>
+                    <div class="imgSlider"><img src="./app/img/img10.jpg"  class="img" alt="img28"></div>
+                    <div class="imgSlider"><img src="./app/img/img11.jfif"  class="img" alt="img29"></div>
+                    <div class="imgSlider"><img src="./app/img/img12.jfif"  class="img" alt="img30"></div>
+                    <div class="imgSlider"><img src="./app/img/img13.jpg" class="img" alt="img31"></div>
+                    <div class="imgSlider"><img src="./app/img/img14.jfif" class="img" alt="img32"></div>
+                    <div class="imgSlider"><img src="./app/img/img15.jfif"  class="img" alt="img33"></div>
+                    <div class="imgSlider"><img src="./app/img/img16.jfif"  class="img" alt="img34"></div>
+                    <div class="imgSlider"><img src="./app/img/img17.jpg"  class="img" alt="img35"></div>
+                    <div class="imgSlider"><img src="./app/img/img18.jfif"  class="img" alt="img36"></div>
+                </div>
+            </div>
+        </div>  
+        <!-- carousel -->
+        <div id="carouselExampleControlsNoTouching" class="carousel slide backgroundCarausel py-3" data-touch="false" data-interval="false" >
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <div class="row mt-4">
+                        <div class="col-4 offset-2 rowBorder"> 
+                        <div class="card colorCarauselItem">
+                            <img src="./app/img/img20.png" class="rounded-circle imgTranslate" alt="img20">
+                            <div class="card-body p-1">
+                                <p class="card-text "> id repudiandae similique, nostrum provident voluptatibus</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-4  mt-5 colorTextButton">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mt-4">
+                        <div class="col-4 offset-2 rowBorder"> 
+                        <div class="card colorCarauselItem">
+                            <img src="./app/img/img19.jfif" class="rounded-circle imgTranslate" alt="img19">
+                            <div class="card-body p-1">
+                                <p class="card-text "> id repudiandae similique, nostrum provident voluptatibus </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-4  mt-5 colorTextButton">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div> 
+                <div class="carousel-item">
+                    <div class="row mt-4">
+                        <div class="col-4 offset-2 rowBorder"> 
+                        <div class="card colorCarauselItem">
+                            <img src="./app/img/img21.jfif" class="rounded-circle imgTranslate" alt="img21">
+                            <div class="card-body p-1">
+                                <p class="card-text "> idyt repudiandae similique, nostrum provident voluptatibus</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-4  mt-5 colorTextButton">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleControlsNoTouching" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <i class="fa-solid fa-angle-left"></i>
+                </span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleControlsNoTouching" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                    <i class="fa-solid fa-angle-right"></i>
+                </span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Visitor listing Page -->
+    <section class="page" id="visitorListingPage">
+        <div id="visitorListingItems" class="container py-2 background"></div>
+        <div>
+            <button type="button" class="btn btn-primary" id="absoluteButton">
+                <i class="fa-solid fa-filter"></i>  
+            </button>
+        </div> 
+    </section>
+
+    <!-- Visitor filter page -->
+    <section class="page" id="visitorFilters">
+        <form id="visitorFiltersId" class="backgroundFilter pb-5">
+            <div class="container min-vh-100">
+                <div class="row justify-content-between py-3">
+                    <div class="col">
+                        <h3 class="textColorFilterTitle">Filter by</h3>
+                    </div>
+                    <div class="col text-right">
+                        <span id="closeButton">
+                            <i class="fa-thin fa-x"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="textColorFilter py-1">By Item Title</h5>
+                        <input type="text" id="titleInput" class="backgroundFilterInputs">
+                    </div>
+                </div>
+                <hr class="backgroundArtistAndSlider my-5">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="textColorFilter py-1">By Artist</h5>
+                        <select id="byArtistSelect" class="backgroundFilterInputs"></select>
+                    </div>
+                </div>
+                <hr class="backgroundArtistAndSlider my-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="textColorFilter py-1">By Price</h5>
+                        <div class="row mb-2">
+                            <div class="col-6 ">
+                                <label for="minPrice" class="m-0 textColorFilter">Min:</label>
+                                <input type="text" id="minPrice" class="backgroundFilterInputs">
+                            </div>
+                            <div class="col-6">
+                                <label for="maxPrice" class="m-0 textColorFilter">Max:</label>
+                                <input type="text" id="maxPrice" class="backgroundFilterInputs">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="backgroundArtistAndSlider my-5">
+                <div class="row">
+                    <div class="col ">
+                        <h5 class="textColorFilter py-1">By Type</h5> 
+                        <select id="byTypeSelect" class="backgroundFilterInputs">
+                            <option value="">Choose Type</option>
+                            <option value="painting">painting</option>
+                            <option value="sculpture">sculpture</option>
+                            <option value="digital">digital</option>
+                            <option value="custom">custom</option>
+                        </select> 
+                    </div>
+                </div>
+                <hr class="backgroundArtistAndSlider my-5">
+                <div class="row text-right">
+                    <div class="col">
+                        <button type="submit" class="btn btn-secondary" id="applayButton">
+                            <i class="fa-solid fa-check"></i> 
+                        </button>
+                    </div>
+                </div>  
+            </div>  
+        </form>
+    </section>
+
+    <!-- Artist Home Page -->
+    <section class="page" id="artistHomePage">
+        <div class="container-fluid min-vh-100 p-3 backgroundArtist background">
+            <div class="row justify-content-center">
+                <div class="col-5 text-center border p-3 visitorButton">
+                    <h6>Total Items Sold</h6>
+                    <div id="totalItemSold" class="fontIncome"></div>
+                </div>
+                <div class="col-5 text-center border p-3 visitorButton">
+                    <h6>Total Income</h6>
+                    <div id="totalIncome" class="fontIncome"></div>
+                </div>
+            </div>
+            <!-- auction -->
+            <div class="row  pt-4" id="rowAuction">
+                <div class="col-10 offset-1 text-center auctionItem colorText p-3">
+                    <h6>Live Auction item</h6>
+                    <div id="LiveAuctionItem" class="fontIncome"></div>
+                    <p>curent bid</p>
+                </div>
+            </div>
+            <div class="row  pt-4" id="rowAuction1">
+                <div class="col-10 offset-1 text-center auctionItem  py-5 ">
+                    <h4 class="textColor pb-2">Live Auction item</h4>
+                    <h3 class="textColor">Currently not available</h3>
+                </div>
+            </div>
+        </div>
+        <!-- chart -->
+        <div class="container-fluid backgroundLandingPageAndChart ">
+            <h4 class="py-3 text-left textDisplay">Display my income for last</h4>
+            <div class="row justify-content-between">
+                <div class="col-4">
+                    <button class="btn px-4 backgroundVisitor text-white daysAgo" id="7">7 days</button>
+                </div>
+                <div class="col-4 text-center">
+                    <button class="btn px-4 bg-primary text-white daysAgo" id="14">14 days</button>
+                </div>
+                <div class="col-4 text-right">
+                    <button class="btn px-4 backgroundVisitor text-white daysAgo" id="30">30 days</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="py-4 col-12">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- Artist Items page -->
+    <section class="page" id="artistItemsPage">
+        <div class="container py-3 backgroundLandingPageAndChart">
+            <div class="row rectangle mb-2 justify-content-center align-items-center">
+                <div class="col text-center">
+                    <a href="#addNewItemPage" class="addNewItemColor">+ Add new item</a>
+                </div>
+            </div>
+        </div>
+        <div id="artistItems" class="container py-2  pl-0 pr-0">
+        </div>
+    </section>
+
+    <!-- Add New item- artist page -->
+    <section class="page" id="addNewItemPage">
+        <form id="addNewEditItem" class="backgroundFilter pb-3 ">
+            <div class="container">
+                <div class="row justify-content-between py-3">
+                    <div class="col"><h3 class="textColorFilterTitle">Add new item</h3></div>
+                    <div class="col text-right">
+                        <label for="inputCheckbox" class="textColorFilter">isPublished</label>
+                        <input type="checkbox" id="inputCheckbox" class="backgroundFilterInputs">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="textColorFilter">By Item Title</h5>
+                        <input type="text" id="titleInputArtist" style="width: 100%;" class="backgroundFilterInputs">
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="textColorFilter">description</h5> 
+                        <textarea id="descriptionTextArea" cols="60" rows="2" style="width: 100%;" class="backgroundFilterInputs" ></textarea>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <div class="row ">
+                            <div class="col-2">
+                                <label for="typeAtrist" class="m-0 textColorFilter">Type</label>
+                                <select id="typeAtrist" class="backgroundFilterInputs">
+                                    <option>Choose option</option>
+                                    <option value="painting">painting</option>
+                                    <option value="sculpture">sculpture</option>
+                                    <option value="digital">digital</option>
+                                    <option value="custom">custom</option>
+                                </select>
+
+                
+                            </div>
+                            <div class="col-2 offset-4">
+                                <label for="priceArtist" class="m-0 textColorFilter">Price</label>
+                                <input type="text" id="priceArtist" class="backgroundFilterInputs">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="textColorFilter">Image URL</h5>
+                        <input type="url" id="imageUrlFromInput" style="width: 100%;" class="backgroundFilterInputs">
+                    </div>
+                </div>
+                <span class="text-center d-block my-2 or">or</span>
+                <div class="rectangle mb-2 justify-content-center align-items-center imageFromCamera">
+                    <div class="col text-center divColInEdit rectangleImg " id="icon">
+                        <img src="./app/img/Camera.png"  alt="camera" id="takePicture">
+                        <p class="text-center textColorFilter">Take a snapshot</>
+                    </div> 
+                    <div class="col-12 p-0 divColCapture">
+                        <img src="" alt="" id="imgUrl">
+                    </div> 
+                </div> 
+                <!-- Footer -->
+        
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <button type="submit" class="btn btn-danger  addAndSave" id="addNewItem" data-dismiss="modal">Add new item</button>
+                    </div>   
+                 
+                    <div class="col text-right">
+                        <button type="button" class="btn cancelButton " id="cancel" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>  
+        </form>
+    </section>
+
+    <!-- Artist camera page -->
+    <section class="page" id="artistCameraPage" >
+        <div class="backgroundFilter" style="height: 100vh;" >
+            <div class="row heightImg pt-3 justify-content-center">
+                <div class="col-11 ">
+                    <video id="liveStream" autoplay  width="100%" height="100%" class="text-center"></video>
+                </div>
+            </div>
+            
+            <div class="row text-center pt-5">
+                <div class="col">
+                    <img src="./app/img/Camera.png" alt="camera" id="capture">
+                </div>
+            </div>
+    
+            <canvas class="d-none" id="canvasId"></canvas>
+            
+            <img id="previewCapture" >
+        </div>
+    </section>
+
+    <!-- live auction -->
+    <section class="page" id="auctionPage">
+        <div class="container">
+            <!-- image -->
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h3 class="artistAuction text-center my-3"></h3>
+                    <h3 class="titleAuction text-center my-3"></h3>
+                    <div id="auctionItem"></div>
+                </div>
+            </div>
+            <!-- price -->
+            <p class="text-center auctionPrice"></p>
+
+            <!-- timer -->
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="text-center my-3" id="timer"></h1> 
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col text-center" id="bidding">
+                    <input type="number" id="inputAuction" placeholder="Enter a price..." class="backgroundArtistAndSlider">
+                    <button class="btn priceButtonAndAuctionButton ml-2" id="buttonAuction">Bid now</button>
+                </div>
+            </div>
+            <div class="row>
+                <div class="col">
+                    <ul id="biddings"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- script bootsrap -->
+    <script src="./bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap/js/popper.min.js"></script> 
+    <script src="./bootstrap/js/bootstrap.min.js"></script> 
+    
+    <!-- pages -->
+    <script src="./app/pages/landingPage.js"></script>
+    <script src="./app/pages/visitorFilters.js"></script>
+    <script src="./app/pages/visitorListingPage.js"></script>
+    <script src="./app/pages/visitorHomePage.js"></script>
+    <script src="./app/pages/artistHomePage.js"></script>
+    <script src="./app/pages/artistItemsPage.js"></script>
+    <script src="./app/pages/addNewItemPage.js"></script>
+    <script src="./app/pages/artistCameraPage.js"></script>
+    <script src="./app/pages/auctionPage.js"></script>
+   
+    <!-- data -->
+    <script src="./data/data.js"></script>
+    <!-- main -->
+    <script src="./app/index.js"></script>
+</body>
+
+</html>
