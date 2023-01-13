@@ -101,9 +101,9 @@ function createCardArtist(item, index) {
     cardFooterButton3,
     cardFooterButton4
   );
-  cardFooterCol.classList.add("col", "d-flex", "justify-content-between");
+  cardFooterCol.classList.add("col", "d-flex", "justify-content-between", );
 
-  cardFooterButton1.classList.add("bnt", "sendToAuction");
+  cardFooterButton1.classList.add("bnt", "sendToAuction" );
   cardFooterButton1.textContent = "Send to Auction";
   newObj.isAuctioning = false;
 
@@ -126,7 +126,7 @@ function createCardArtist(item, index) {
   });
 
 
-  cardFooterButton2.classList.add("btn");
+  cardFooterButton2.classList.add("btn" );
   cardFooterButton2.textContent = `${isPublished}`;
   if (isPublished === true) {
     cardFooterButton2.textContent = "isPublished";
@@ -155,7 +155,7 @@ function createCardArtist(item, index) {
     }
   });
 
-  cardFooterButton3.classList.add("bnt", "removeButton");
+  cardFooterButton3.classList.add("bnt", "removeButton" );
   cardFooterButton3.textContent = "Remove";
   cardFooterButton3.addEventListener("click", function (event) {
     if (confirm("Do you want to remove card?") == true) {

@@ -206,13 +206,13 @@ p {
   color: #a26a5e;
   font-style: normal !important;
   font-weight: 100 !important;
-  font-size: 38px;
+  font-size: 30px;
   font-family: "Reenie Beanie", cursive !important;
 }
 /* logo */
 .logo {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
 }
 
 /* slider for Visitor Home page */
