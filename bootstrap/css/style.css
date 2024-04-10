@@ -1,0 +1,455 @@
+html {
+  overflow-y: scroll;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #edd5bb;
+  min-height: 100%;
+  overflow-y: scroll
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+/* background picture */
+.backgroungWall {
+  background-image: url('../../app/img/backgroundWall.jpg');
+}
+/* backgroung colors */
+.backgroundHeader {
+  background: #fcebd5;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.backgroundLandingPageAndChart {
+  background-color: #fcebd5;
+}
+.backgroundVisitor {
+  background-color: #a26a5e;
+}
+.backgroundChart {
+  background-color: #fcebd5;
+}
+.backgroundArtistItems {
+  background-color: #a26a5e;
+}
+/* color */
+.textColor {
+  color: #FCEBD5;
+}
+.textDisplay {
+  color: #b39e84;
+}
+/* filter page */
+.backgroundFilter {
+  background-color: #a26a5e;
+}
+.background {
+  background-color: #edd5bb;
+}
+.backgroundFilterInputs {
+  background-color: #a26a5e !important;
+  color: #edd5bb !important;
+  border: 1px solid #edd5bb !important;
+}
+.textColorFilterTitle {
+  color: #fcebd5 !important;
+}
+.textColorFilter {
+  color: #edd5bb !important;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+.or {
+  font-size: 18px;
+  line-height: 21px;
+  color: #fcebd5;
+}
+
+/* add New Item */
+.addAndSave {
+  background: #d54c2e !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #fcebd5 !important;
+  display: block;
+}
+/* cancel btn */
+.cancelButton {
+  background: #e5e5e5 !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #5a5a5a !important;
+}
+
+/* close button */
+#closeButton {
+  background-color: transparent;
+  border: none;
+}
+.fa-x {
+  color: #fcebd5 !important;
+  font-size: 30px;
+}
+/* applay button */
+#applayButton {
+  font-size: 20px;
+  background-color: #d54c2e;
+  border: none;
+}
+
+/* add new item color */
+.addNewItemColor {
+  color: #a26a5e !important;
+}
+/*  btn colors artist items */
+.sendToAuction {
+  background: #1b59ac !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #f8f8f8 !important;
+}
+.unPublishedButton {
+  background: #1bac6f !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #f8f8f8 !important;
+}
+.PublishedButton {
+  background: #e5e5e5 !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #5a5a5a !important;
+}
+.removeButton {
+  background: #d54c2e !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #fcebd5 !important;
+}
+.editButton {
+  background: #fcebd5 !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #a26a5e !important;
+}
+.priceButtonAndAuctionButton {
+  background: #a26a5e !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 2px !important;
+  color: #fcebd5 !important;
+}
+/* text colors card artist items */
+.textColorArtistItems {
+  color: #a26a5e !important;
+}
+.textColorDate {
+  color: #e09686 !important;
+}
+/* carausel */
+.backgroundCarausel {
+  background-color: #fcebd5;
+}
+
+.backgroundArtistAndSlider {
+  background-color: #edd5bb;
+}
+
+.colorCarauselItem {
+  background-color: #e09686;
+  color: #f8f8f8;
+}
+.colorTextButton {
+  color: #a26a5e !important;
+}
+
+#chooseArtist {
+  background-color: #edd5bb;
+  border: 1px solid #774e45;
+  border-radius: 2px;
+  width: 125px;
+}
+
+/* font */
+.fontIncome {
+  font-size: 40px;
+}
+.visitorText {
+  font-size: 30px;
+  color: #693e34;
+}
+.visitorButton {
+  color:#FCEBD5;
+  background-color: #a26a5e !important;
+}
+/* landing page buttons */
+#asArtist,
+#asVisitor {
+  font-size: 45px;
+  background-color: transparent;
+  color: #fcebd5;
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Reenie Beanie", cursive;
+}
+/* header text */
+.nameOfArtist {
+  color: #a26a5e;
+  font-style: normal !important;
+  font-weight: 100 !important;
+  font-size: 30px;
+  font-family: "Reenie Beanie", cursive !important;
+}
+/* logo */
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+/* slider for Visitor Home page */
+.img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.3));
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.sliders {
+  width: 100%;
+  display: flex;
+  flex-direction: column !important ;
+  background-color: #EDD5BB;
+  overflow: hidden;
+
+}
+.imgSlider {
+  width: 300px;
+  display: flex;
+  perspective: 100%;
+
+}
+#imgFirstParent {
+  animation: slideLeft 50s linear infinite;
+}
+
+#imgSecondParent{
+  animation: slideRight 50s linear infinite;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-270vh);
+  }
+}
+
+@keyframes slideRight {
+  0%{
+    transform: translateX(-200vh);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+/* carousel for visitor home page */
+.imgTranslate {
+  width: 60px;
+  transform: translate(29px, -25px);
+}
+.carousel-control-next {
+  background-color: transparent !important;
+  border: none !important;
+  right: 10px;
+}
+.carousel-control-prev {
+  background-color: transparent !important;
+  border: none !important;
+  left: 10px;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-image: none !important;
+  font-size: 30px !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.fa-angle-right,
+.fa-angle-left {
+  color: #4e3934 !important;
+  font-size: 30px !important;
+}
+.rowBorder {
+  border-right: 1px solid #a26a5e !important;
+}
+
+/* visitor listing page  */
+#absoluteButton {
+  position: fixed;
+  width: 50px;
+  bottom: 15px;
+  right: 25px;
+  background: #d54c2e;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.fa-filter {
+  color: #fcebd5;
+  font-size: 20px;
+}
+/* menu */
+.navbar-toggler {
+  border: none !important;
+}
+img.navbar-toggler-icon {
+  border: none !important;
+}
+/* links menu */
+.nav-link {
+  color: #fcebd5 !important;
+  font-weight: 300 !important;
+  font-size: 32px !important;
+  font-family: "Roboto";
+}
+
+/* rectangle */
+.rectangle {
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  border: 2px dashed #a26a5e;
+  border-radius: 2px;
+}
+/* rectangle img*/
+.rectangleImg {
+  padding: 10px 15px;
+  margin: 0;
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  border: 2px dashed #fcebd5;
+  border-radius: 2px;
+}
+
+/* add and save button in artist add new page */
+
+.addAndSave {
+  display: block;
+}
+
+/* IMG CROP */
+
+figure {
+  margin: 0;
+  margin-right: 1em;
+  width: min-content;
+}
+
+.cropped-image {
+  width: 200px;
+  height: 200px;
+  border: 3px solid #bbb;
+}
+.cover-image {
+  object-fit: cover;
+}
+.imageFromCamera {
+  width: 100%;
+  height: auto;
+}
+
+#imgUrl {
+  width: 100%;
+  height: 100%;
+}
+
+.divColCapture {
+  display: none;
+}
+.divColInEdit {
+  display: block;
+}
+
+/* auction image */
+/* div > img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+ */
+/* auction li element */
+.liAmoutApi {
+  font-size: large;
+  margin-left: 150px;
+  color: rgb(238, 58, 58);
+}
+
+.liAmout {
+  color: rgb(75, 75, 231);
+  font-size: large;
+}
+
+#canvasId {
+  min-width: 100%;
+  background: transparent;
+}
+
+/* bootstrap button */
+.btn-primary {
+  border-color: transparent !important;
+  color: #a26a5e !important;
+}
+
+/* auction  */
+.auctionItem {
+  background: #d54c2e;
+  border-radius: 2px;
+}
+/* modal for auction */
+
+.modalAuction {
+  display: none !important;
+}
+/* image */
+video {
+  object-fit: fill;
+}
+
+.heightImg {
+  height: 400px;
+}
+
+/* add margin- landing page */
+.paddingBottom {
+  margin-bottom: 170px;
+}
+
+/* modal */
+.modal {
+  display: none !important;
+}
+
+.fade.show {
+  display: none;
+}
+
+body.modal-open {
+  padding-right: 0 !important;
+}
